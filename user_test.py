@@ -5,7 +5,7 @@ class TestUser(unittest.TestCase):
         """
         Set up method to run before each test cases.
         """
-        self.new_user = User("Margaret", "Kimani", "0712345678", "margaretkimani@example.com")  
+        self.new_user = User("Margaret", "Kimani", "0798765432", "margaretkimani@example.com")  
 
     def tearDown(self):
         """
@@ -19,7 +19,7 @@ class TestUser(unittest.TestCase):
         """
         self.assertEqual(self.new_user.first_name, "Margaret")
         self.assertEqual(self.new_user.last_name, "Kimani")
-        self.assertEqual(self.new_user.phone_number, "0712345678")
+        self.assertEqual(self.new_user.phone_number, "0798765432")
         self.assertEqual(self.new_user.email, "margaretkimani@example.com")
 
     def test_save_user(self):
