@@ -5,7 +5,7 @@ def create_user(fname, lname, phone, email):
     """
     Function to create a new user
     """
-    new_user = User(fname, lname, phone, email)
+    new_user = User(fname, lname, pnumber, email)
     return new_user
 
 def create_credential(uname, pword, email):
@@ -43,7 +43,7 @@ def display_user():
     """
     Function that returns saved users
     """
-    return User.display_users()
+    return User.display_user()
 
 def display_cred():
     """
@@ -90,8 +90,8 @@ def main():
             print("Enter Password")
             pword = input()
 
-            save_user(create_user(f_name, l_name, p_number, e_address))# create and save new user.
-            save_cred(create_credential(user_name, pword, e_address))# create and save credential for the user
+            save_user(create_user(f_name, l_name, p_number, e_address)) # create and save new user.
+            save_cred(create_credential(user_name, pword, e_address)) # create and save credential for the user
             print('\n')
             print(f" A new {site} account by {f_name} {l_name} has successfully been created")
             print(f" The username is {user_name} and the password is {pword}")
@@ -132,7 +132,7 @@ def main():
             print('\n')
 
         elif short_code == 'dis':
-            if display_user():
+            if display_users():
                 print("A list of all your user accounts")
                 print('\n')
 
@@ -151,4 +151,4 @@ def main():
             print(" :( Only type in the allowed actions !!")
 
 if __name__ == '__main__':
-    main()
+   main()
