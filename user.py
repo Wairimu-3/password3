@@ -24,5 +24,3 @@ class User:
         method that returns the class array
         """
         return cls.users_array
-
-

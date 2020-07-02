@@ -24,5 +24,3 @@ class Credential:
         method that returns the credential array
         """
         return cls.credential_array
-
-
