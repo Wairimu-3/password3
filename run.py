@@ -1,5 +1,4 @@
-#!/usr/bin/env python3.6
-from user import User
+#!/usr/bin/env python3.8
 from credential import Credential
 import random
 def create_user(fname, lname, phone, email):
