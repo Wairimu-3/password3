@@ -6,8 +6,9 @@ class Credential:
     pass
     credential_array = []
 
-    def __init__(self, user_name, password, email):
-        self.user_name = user_name
+    def __init__(self, credential_name, usr_name, password, email):
+        self.credential_name = credential_name
+        self.usr_name = usr_name
         self.password = password
         self.email = email
 

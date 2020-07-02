@@ -5,7 +5,7 @@ class TestUser(unittest.TestCase):
         """
         Set up method to run before each test cases.
         """
-        self.new_user = User("Margaret", "Kimani", "0798765432", "margaretkimani@example.com")  
+        self.new_user = User("Margaret", "Kimani", "Royals", "skrtdatway2")  
 
     def tearDown(self):
         """
@@ -19,9 +19,8 @@ class TestUser(unittest.TestCase):
         """
         self.assertEqual(self.new_user.first_name, "Margaret")
         self.assertEqual(self.new_user.last_name, "Kimani")
-        self.assertEqual(self.new_user.phone_number, "0798765432")
-        self.assertEqual(self.new_user.email, "margaretkimani@example.com")
-
+        self.assertEqual(self.new_user.user_name, "Royals")
+        self.assertEqual(self.new_user.password, "skrtdatway2")
     def test_save_user(self):
         """
         test_save_user test case to test if the user object is saved into
@@ -36,7 +35,7 @@ class TestUser(unittest.TestCase):
         to our users_array
         """
         self.new_user.save_user_details()
-        test_user = User("Test", "user", "0712345678", "user@user.com")  
+        test_user = User("Test", "user", "0712345678" ,"user@example.com")  
         test_user.save_user_details()
         self.assertEqual(len(User.users_array), 2)
 

@@ -5,7 +5,7 @@ class TestUser(unittest.TestCase):
         """
         Set up method to run before each test cases.
         """
-        self.new_credential = Credential("user_name", "password", "email@example.com")
+        self.new_credential = Credential("margaret", "royals", "123456", "email@gmail.com")  # create Account obj
 
     def tearDown(self):
         """
@@ -17,9 +17,10 @@ class TestUser(unittest.TestCase):
         """
         test_init test case to test if the object is initialized properly
         """
-        self.assertEqual(self.new_credential.user_name, "user_name")
-        self.assertEqual(self.new_credential.password, "password")
-        self.assertEqual(self.new_credential.email, "email@example.com")
+        self.assertEqual(self.new_credential.credential_name, "margaret")
+        self.assertEqual(self.new_credential.usr_name, "royals")
+        self.assertEqual(self.new_credential.password, "123456")
+        self.assertEqual(self.new_credential.email, "email@gmail.com")
 
     def test_save_cred(self):
         """

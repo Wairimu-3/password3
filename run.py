@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.7
 from user import User
 from credential import Credential
 
@@ -8,7 +9,7 @@ def create_user(account, user_name, password, email):
 
 
 def save_user(user):
-    user.save_user()
+    user.save_user_details()
 
 
 def del_user(user):
@@ -60,13 +61,13 @@ def main():
 
     while True:
         print(
-            "Use the short code to continue :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n "
+            "Use these known short codes to continue :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n "
             "ex ->exit Password3. ")
 
         short_code = input().lower()
 
         if short_code == 'su':
-            print("Welcome. Create a User Account")
+            print("Create an Account")
             print("_" * 100)
             account = input('Account name:')
             print('\n')
@@ -83,7 +84,7 @@ def main():
 
         elif short_code == 'da':
             if display_user():
-                print("Below is your account and details.")
+                print("Here is your account and your details")
                 print('\n')
                 for user in display_user():
                     print(f"Account name:{user.user_name}  User name: {user.user_name} Password:{user.password}")
@@ -91,7 +92,7 @@ def main():
 
             else:
                 print('\n')
-                print("You dont have an account yet,Sign up to create one")
+                print("You dont have an account yet,sign up?")
                 print('\n')
 
         elif short_code == 'ln':
@@ -113,7 +114,7 @@ def main():
                     short_code = input().lower()
 
                     if short_code == "ca":
-                        print("Cool!Create new credential")
+                        print("Create new credential")
                         print('_' * 20)
                         credential_name = input('Credential name:')
                         print('\n')
@@ -138,12 +139,12 @@ def main():
 
                         else:
                             print('\n')
-                            print("You don't seem to have created any credentials yet")
+                            print("You don't seem to have created any account yet")
                             print('\n')
 
                     elif short_code == "ex":
                         print('\n')
-                        print(f"You have logged out of your {account} account")
+                        print(f"You have logged out your {account} account")
                         print('\n')
                         break
 
@@ -154,7 +155,7 @@ def main():
                 print('\n')
 
         elif short_code == "ex":
-            print(f"{user_name} Great...Feel free to visit the account again")
+            print(f"{user_name} Feel free to visit the account again")
             break
         else:
             print("Try using the short codes")
