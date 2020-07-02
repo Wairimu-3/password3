@@ -145,7 +145,7 @@ def main():
                 print("You don't have any existing accounts")
                 print('\n')
         elif short_code == "exit":
-            print(":/ Nice to have you")
+            print(":/ Welcome,feel free to visit the site again.")
             break
         else:
             print(" :( Only type in the allowed actions !!")
